@@ -12,7 +12,7 @@ module.exports = {
     },
 
     router: {
-        // base: '/ozgur/',
+        base: '/website/',
     },
 
     loading: { color: '#487fff' },
