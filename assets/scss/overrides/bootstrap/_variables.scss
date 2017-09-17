@@ -1,0 +1,95 @@
+//
+// Bootstrap Variable Overrides
+//
+
+//
+// Color system
+//
+
+$gray-100: #f8fbff;
+$gray-200: #edf0f4;
+$gray-300: #d3dff2;
+$gray-400: #ced9ea;
+$gray-500: #a9b5c9;
+$gray-600: #889bba;
+$gray-700: #50637f;
+$gray-800: #343f51;
+$gray-900: #293347;
+
+$blue:    #487fff;
+$pink:  #ea4c89;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  primary: $blue,
+  dribbble: $pink
+), $theme-colors);
+
+
+//
+// Spacers
+//
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 3.75),
+  7: ($spacer * 4.375),
+  8: ($spacer * 5),
+  9: ($spacer * 5.625),
+  10: ($spacer * 6.25)
+) !default;
+
+
+//
+// Body
+//
+
+$body-color:    $gray-700;
+
+
+//
+// Links
+//
+
+$link-hover-decoration: none;
+
+
+//
+// Fonts
+//
+
+$font-family-serif: 'PT Serif', serif;
+$font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+$font-size-base: 1.125rem;
+$font-size-sm:   .9375rem;
+
+$headings-font-family:  $font-family-serif;
+$headings-font-weight: 700;
+$headings-color: $gray-900;
+
+
+//
+// Buttons
+//
+
+$input-btn-padding-y:       1rem !default;
+$input-btn-padding-x:       2rem !default;
+
+
+//
+// Navbar
+//
+
+$navbar-height: 4.375rem;
+
+$navbar-light-color: $gray-900;
+$navbar-light-hover-color: $blue;
+$navbar-light-active-color: $blue;
+

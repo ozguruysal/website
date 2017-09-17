@@ -1,0 +1,132 @@
+//
+// Navbar
+//
+
+.navbar {
+  height: $navbar-height;
+}
+
+.navbar-brand {
+  padding-top: 1rem;
+  line-height: 1;
+  z-index: 2;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-weight: 600;
+
+      // Overrides for mobile menu
+      @include media-breakpoint-down(sm) {
+        color: $white;
+        font-size: 3.75rem;
+        font-weight: 900;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+
+// Site Navigation
+
+.site-navigation {
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $gray-900;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+
+// Hamburger Menu
+
+.hamburger-menu {
+  width: $navbar-height;
+  height: $navbar-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+
+  span {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 1px;
+      background-color: $gray-900;
+
+      &:before,
+      &:after {
+          position: absolute;
+          left: 0;
+          width: 30px;
+          height: 1px;
+          background: $gray-900;
+          content: "";
+      }
+
+      &:before {
+          bottom: 7px;
+      }
+
+      &:after {
+          top: 7px;
+      }
+  }
+}
+
+
+// Mobile Menu Open State
+
+.navbar.open {
+  @include media-breakpoint-down(sm) {
+    .site-navigation {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .hamburger-menu {
+      span {
+        background-color: transparent;
+
+        &:before,
+        &:after {
+          background-color: $white;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+          bottom: 0;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+
+    .navbar-brand {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
