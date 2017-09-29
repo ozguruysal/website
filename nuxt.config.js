@@ -12,7 +12,7 @@ module.exports = {
     },
 
     router: {
-        base: '/website/',
+        // base: '/website/',
     },
 
     loading: { color: '#487fff' },
