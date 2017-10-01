@@ -11,9 +11,9 @@
 
             <div class="site-navigation ml-auto">
                 <ul class="navbar-nav">
-                    <li class="nav-item" @click="isMobileMenuOpen = false"><nuxt-link class="nav-link" to="#about">About</nuxt-link></li>
-                    <li class="nav-item" @click="isMobileMenuOpen = false"><nuxt-link class="nav-link" to="#work">Work</nuxt-link></li>
-                    <li class="nav-item" @click="isMobileMenuOpen = false"><nuxt-link class="nav-link" to="#contact">Contact</nuxt-link></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" @click="onNavClick">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#work" @click="onNavClick">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" @click="onNavClick">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -26,6 +26,13 @@ export default {
         return {
             isMobileMenuOpen: false,
         };
+    },
+
+    methods: {
+        onNavClick(e) {
+            this.isMobileMenuOpen = false;
+            this.$scrollTo(e.target.hash);
+        },
     },
 };
 </script>

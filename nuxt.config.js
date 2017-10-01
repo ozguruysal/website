@@ -21,7 +21,10 @@ module.exports = {
         '@/assets/scss/main.scss',
     ],
 
-    plugins: ['~/plugins/svg-sprite-loader'],
+    plugins: [
+        '~/plugins/svg-sprite-loader',
+        '~/plugins/vue-scrollto',
+    ],
 
     build: {
         extend(config, ctx) {
