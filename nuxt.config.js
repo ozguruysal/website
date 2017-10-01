@@ -24,6 +24,7 @@ module.exports = {
     plugins: [
         '~/plugins/svg-sprite-loader',
         '~/plugins/vue-scrollto',
+        { src: '~plugins/ga.js', ssr: false },
     ],
 
     build: {
