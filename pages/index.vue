@@ -27,14 +27,15 @@ export default {
   async asyncData() {
     try {
       const { data } = await axios.get(
-        "https://api.dribbble.com/v1/user/shots?page=1&per_page=15",
+        "https://api.dribbble.com/v2/user/shots?page=1&per_page=15",
         {
           headers: { Authorization: `Bearer ${process.env.dribbbleToken}` }
         }
       );
 
       const excludedShots = [
-        3752525, // 2 Dribbble invites
+        3752525, // Dribbble invites
+        3882608, // This website
         3663209, // UI for Bridge.NET Unit Test Results
         3489448 // XLRStats Dashboard
       ];
@@ -46,7 +47,6 @@ export default {
 
       return { dribbbleShots };
     } catch (err) {
-      console.log(err);
       return { dribbbleShots: [] };
     }
   }

@@ -48,7 +48,7 @@ module.exports = {
     },
 
     env: {
-        dribbbleToken: '9ef7253312909c40f804ca06c81668cbd9cccee1590e39cc4accd1bd4d8cbb95',
+        dribbbleToken: '9e096a9630f0d5572b692746bcdc13c20f09874c814d785cffd71854fbc3bd3a',
         email: 'ozguruysal@gmail.com',
     },
 };
