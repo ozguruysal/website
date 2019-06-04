@@ -22,17 +22,19 @@
 
 <script>
 export default {
-    data() {
-        return {
-            isMobileMenuOpen: false,
-        };
-    },
+  name: "AppHeader",
 
-    methods: {
-        onNavClick(e) {
-            this.isMobileMenuOpen = false;
-            this.$scrollTo(e.target.hash);
-        },
-    },
+  data() {
+    return {
+      isMobileMenuOpen: false
+    };
+  },
+
+  methods: {
+    onNavClick(e) {
+      this.isMobileMenuOpen = false;
+      this.$scrollTo(e.target.hash);
+    }
+  }
 };
 </script>

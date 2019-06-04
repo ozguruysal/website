@@ -37,110 +37,110 @@
 </template>
 
 <script>
-import Icon from '../Icon.vue';
+import Icon from "../Icon.vue";
 
 export default {
-    name: 'work',
+  name: "Work",
 
-    components: {
-        Icon,
-    },
+  components: {
+    Icon
+  },
 
-    props: {
-        dribbbleShots: {
-            type: Array,
-            default: [],
-        },
-    },
+  props: {
+    dribbbleShots: {
+      type: Array,
+      default: []
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/scss/overrides/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/functions';
-@import '../../assets/scss/vendor/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/mixins';
+@import "../../assets/scss/overrides/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/functions";
+@import "../../assets/scss/vendor/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/mixins";
 
 .container-fluid {
-    width: 85vw;
+  width: 85vw;
 
-    @media (min-width: 1500px) {
-        width: 75vw;
-    }
+  @media (min-width: 1500px) {
+    width: 75vw;
+  }
 }
 
 section {
-    border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid $gray-300;
 }
 
 figcaption,
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 figcaption {
-    padding: 2rem;
-    color: #fff;
-    z-index: 1;
-    transition: .45s ease-in-out;
+  padding: 2rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.45s ease-in-out;
 }
 
 .overlay {
-    background-color: $gray-900;
-    transition: .45s ease-in-out;
+  background-color: $gray-900;
+  transition: 0.45s ease-in-out;
 }
 
 img {
-    transform: scale(1);
-    transition: .25s ease-in-out;
+  transform: scale(1);
+  transition: 0.25s ease-in-out;
 }
 
 figure {
-    margin-bottom: 1.875rem;
-    position: relative;
-    overflow: hidden;
-    cursor: default;
+  margin-bottom: 1.875rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
 
-    &:hover {
-        figcaption {
-            opacity: 1;
-        }
-
-        .overlay {
-            opacity: 1;
-        }
-
-        img {
-            transform: scale(1.15);
-        }
+  &:hover {
+    figcaption {
+      opacity: 1;
     }
 
-    a {
-        color: lighten(theme_color('primary'), 10%);
-
-        &:hover,
-        &:active {
-            color: theme_color('primary');
-        }
+    .overlay {
+      opacity: 1;
     }
+
+    img {
+      transform: scale(1.15);
+    }
+  }
+
+  a {
+    color: lighten(theme_color("primary"), 10%);
+
+    &:hover,
+    &:active {
+      color: theme_color("primary");
+    }
+  }
 }
 
 .title {
-    margin-bottom: .3rem;
-    font-size: 1.5rem;
-    font-weight: 300;
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .btn {
-    width: 100%;
+  width: 100%;
 
-    @include media-breakpoint-up(sm) {
-        width: 13.75rem;
-    }
+  @include media-breakpoint-up(sm) {
+    width: 13.75rem;
+  }
 }
 </style>

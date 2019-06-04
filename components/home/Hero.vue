@@ -15,35 +15,35 @@
 
 <script>
 export default {
-    name: 'hero',
+  name: "Hero"
 };
 </script>
 
 
 <style lang="scss">
-@import '../../assets/scss/overrides/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/functions';
-@import '../../assets/scss/vendor/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/mixins';
+@import "../../assets/scss/overrides/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/functions";
+@import "../../assets/scss/vendor/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/mixins";
 
 .hero {
   height: calc(100vh - #{$navbar-height});
 
   @include media-breakpoint-up(sm) {
-      min-height: 40rem;
+    min-height: 40rem;
   }
 
   h1 {
-      margin-bottom: 1.25rem;
-      font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
 
-      @include media-breakpoint-up(sm) {
-          font-size: 3.375rem;
-      }
+    @include media-breakpoint-up(sm) {
+      font-size: 3.375rem;
+    }
   }
 
   p {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 </style>

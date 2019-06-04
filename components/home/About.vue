@@ -38,68 +38,68 @@
 </template>
 
 <script>
-import Icon from '../../components/Icon.vue';
+import Icon from "../../components/Icon.vue";
 
 export default {
-    name: 'about',
+  name: "About",
 
-    components: {
-        Icon,
-    },
+  components: {
+    Icon
+  }
 };
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/overrides/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/functions';
-@import '../../assets/scss/vendor/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/mixins';
+@import "../../assets/scss/overrides/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/functions";
+@import "../../assets/scss/vendor/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/mixins";
 
 .about-card {
-    margin-bottom: 1.875rem;
-    padding: 4.5rem 2rem;
-    height: 100%;
-    border: 1px solid $gray-300;
-    position: relative;
-    overflow: hidden;
+  margin-bottom: 1.875rem;
+  padding: 4.5rem 2rem;
+  height: 100%;
+  border: 1px solid $gray-300;
+  position: relative;
+  overflow: hidden;
 
-    @include media-breakpoint-up(sm) {
-        padding: 5.25rem 6.25rem;
-    }
+  @include media-breakpoint-up(sm) {
+    padding: 5.25rem 6.25rem;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    border-radius: 20rem;
+    background-color: theme-color("primary");
+    content: "";
+    z-index: -1;
+    opacity: 0.07;
+  }
+
+  &.designer {
+    border-bottom-width: 0;
 
     &:after {
-        position: absolute;
-        display: block;
-        border-radius: 20rem;
-        background-color: theme-color('primary');
-        content: '';
-        z-index: -1;
-        opacity: 0.07;
+      width: 20rem;
+      height: 20rem;
+      bottom: 5rem;
+      left: -35%;
     }
 
-    &.designer {
-        border-bottom-width: 0;
-
-        &:after {
-            width: 20rem;
-            height: 20rem;
-            bottom: 5rem;
-            left: -35%;
-        }
-
-        @include media-breakpoint-up(md) {
-            border-right-width: 0;
-            border-bottom-width: 1px;
-        }
+    @include media-breakpoint-up(md) {
+      border-right-width: 0;
+      border-bottom-width: 1px;
     }
+  }
 
-    &.developer {
-        &:after {
-            width: 25rem;
-            height: 25rem;
-            top: 5rem;
-            right: -40%;
-        }
+  &.developer {
+    &:after {
+      width: 25rem;
+      height: 25rem;
+      top: 5rem;
+      right: -40%;
     }
+  }
 }
 </style>

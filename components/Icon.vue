@@ -6,16 +6,16 @@
 
 <script>
 export default {
-    name: 'icon',
+  name: "Icon",
 
-    props: {
-        name: String,
-    },
+  props: {
+    name: String
+  },
 
-    computed: {
-        href() {
-            return `#${this.name}`;
-        },
-    },
+  computed: {
+    href() {
+      return `#${this.name}`;
+    }
+  }
 };
 </script>

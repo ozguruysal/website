@@ -18,50 +18,67 @@
 </template>
 
 <script>
-import Icon from '../Icon.vue';
+import Icon from "../Icon.vue";
 
 export default {
-    name: 'contact',
+  name: "Contact",
 
-    components: {
-        Icon,
-    },
+  components: {
+    Icon
+  },
 
-    mounted() {
-        // Trying to avoid email scraping bstrds
-        document.querySelector('#email').href = `mailto:${process.env.email}`;
-    },
+  mounted() {
+    // Trying to avoid email scraping bstrds
+    document.querySelector("#email").href = `mailto:${process.env.email}`;
+  }
 };
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/overrides/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/functions';
-@import '../../assets/scss/vendor/bootstrap/variables';
-@import '../../assets/scss/vendor/bootstrap/mixins';
+@import "../../assets/scss/overrides/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/functions";
+@import "../../assets/scss/vendor/bootstrap/variables";
+@import "../../assets/scss/vendor/bootstrap/mixins";
 
 .social-links {
-    .list-inline-item {
-        margin-bottom: 1rem;
+  .list-inline-item {
+    margin-bottom: 1rem;
 
-        &:not(:last-child) {
-            margin-right: 0.75rem;
+    &:not(:last-child) {
+      margin-right: 0.75rem;
 
-            @include media-breakpoint-up(sm) {
-                margin-right: 2.2rem;
-            }
-        }
+      @include media-breakpoint-up(sm) {
+        margin-right: 2.2rem;
+      }
+    }
+  }
+
+  a {
+    color: $gray-900;
+
+    &.twitter:hover {
+      color: #1da1f2;
     }
 
-    a {
-        color: $gray-900;
-
-        &.twitter:hover { color: #1da1f2 }
-        &.github:hover { color: #0366d6 }
-        &.dribbble:hover { color: $pink }
-        &.behance:hover { color: #0057ff }
-        &.linkedin:hover { color: #0077b5 }
-        &.email:hover { color: $blue }
+    &.github:hover {
+      color: #0366d6;
     }
+
+    &.dribbble:hover {
+      color: $pink;
+    }
+
+    &.behance:hover {
+      color: #0057ff;
+    }
+
+    &.linkedin:hover {
+      color: #0077b5;
+    }
+
+    &.email:hover {
+      color: $blue;
+    }
+  }
 }
 </style>

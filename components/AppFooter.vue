@@ -10,17 +10,17 @@
 
 <script>
 export default {
-    name: 'footer',
+  name: "AppFooter"
 };
 </script>
 
 <style lang="scss">
-@import '../assets/scss/overrides/bootstrap/variables';
+@import "../assets/scss/overrides/bootstrap/variables";
 
 .site-footer {
-    padding: 2.5rem 0;
-    font-size: .9375rem;
-    border-top: 1px solid $gray-300;
-    background-color: $gray-100;
+  padding: 2.5rem 0;
+  font-size: 0.9375rem;
+  border-top: 1px solid $gray-300;
+  background-color: $gray-100;
 }
 </style>
